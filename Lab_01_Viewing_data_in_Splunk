@@ -5,3 +5,4 @@ Result: 20 events, fields host, EventCode, user, src_ip
 Checked: EventCode counts (4625 = 12, 4624 = 4, others 1 each)
 Learned: An index stores events, and the fields list shows the field names I use in searches.
 Screenshot: (the results page)
+(./Screenshots/Viewing_Data_in_Splunk/Screenshot%202026-11-09%20122440.png)
