@@ -49,10 +49,6 @@ The search returned **20 events**, matching the 20 rows in my file.
 
 ![src_ip values](Screenshots/Viewing_Data_in_Splunk/Screenshot%202026-11-09%20122739.png)
 
-## Observations
-- Failed logons (4625) are 60% of all events.
-- Half of the events (10 of 20) come from one IP, 203.0.113.50, which I will investigate in the next labs.
-
 ## What I learned
 - Field names depend on the data source, so I check the fields list before writing a search.
 - The counts in the fields list help me verify that the data uploaded correctly.
