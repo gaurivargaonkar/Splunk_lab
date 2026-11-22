@@ -1,0 +1,30 @@
+Date/Time Detected: 2026-11-21, 04:02:22
+
+1. WHAT FIRED
+- Detection: Repeated Windows Security Event 4625 (failed logon) 
+  followed by Event 4624 (successful logon)
+- Source log: WinEventLog:Security
+- Authentication method: SSH (sshd.exe)
+- Severity assigned: High (failure-then-success pattern)
+
+2. WHO / WHERE
+- Target account: splunklab
+- Host: GAURI (192.168.24.137)
+- Source IP: Not captured (known limitation of SSH auth logging on 
+  this system)
+- Failure reason: Unknown user name or bad password (0xC000006D)
+
+3. BEFORE / AFTER
+- 10 failed logon attempts within ~9 seconds (04:02:22 to 04:02:31)
+- Immediately followed by a successful logon (04:02:24, overlapping 
+  with the failure burst due to parallel connection attempts)
+- A second successful logon occurred later at 04:52:52, suggesting 
+  a repeated attack attempt
+
+6. VERDICT
+- TRUE POSITIVE (confirmed - I generated this activity myself using 
+  Hydra against my own test account, in an isolated lab)
+- Matches brute-force pattern: multiple rapid failures, then success
+
+7. MITRE ATT&CK MAPPING
+- T1110 Brute Force (Credential Access)
