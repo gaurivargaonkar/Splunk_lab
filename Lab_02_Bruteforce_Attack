@@ -27,4 +27,6 @@ Date/Time Detected: 2026-11-21, 04:02:22
 - Matches brute-force pattern: multiple rapid failures, then success
 
 7. MITRE ATT&CK MAPPING
-- T1110 Brute Force (Credential Access)
+- MITRE ATT&CK: T1110.001 - Password Guessing / Dictionary Attack 
+(Credential Access) - a Hydra-based dictionary attack using a 
+curated wordlist, as opposed to exhaustive brute force
